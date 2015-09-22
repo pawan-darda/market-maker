@@ -9,8 +9,8 @@ BROKER_TRANSPORT_OPTIONS = {'queue_name_prefix': 'celery-',
                             'polling_interval': 1}
 
 # these should be url encode for broker to work properly
-BROKER_USER = urllib.quote('AKIAJZCVQZVAUMMYZNPA', safe='')
-BROKER_PASSWORD = urllib.quote('o6YVORM2g1Rv2NZRnQoSKoxX4OfxnTimKL340oLl', safe='')
+BROKER_USER = urllib.quote('', sa:fe='')
+BROKER_PASSWORD = urllib.quote('', safe='')
 CELERY_BROKER_URL = 'sqs://%s:%s@' % (BROKER_USER, BROKER_PASSWORD)
 '''
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
