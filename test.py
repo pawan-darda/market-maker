@@ -1,0 +1,13 @@
+import requests
+import random
+
+for i in range(100):
+    p = {'x':random.randrange(1,10000000), 'y':random.randrange(1,1000000000)}
+    r = requests.get('http://localhost:5000/test', params = p)
+    if r:
+        print r.json()
+
+    gto = r.json()['goto']
+    r2 = requests.get("http://localhost:5000/test/result/{}".format(gto))
+    if r2:
+        print r2.json()
